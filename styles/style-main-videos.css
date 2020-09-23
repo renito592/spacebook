@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('background.png') fixed;
+}
+
+.slider {
+    max-width: fit-content;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #555;
+    margin: 30px auto;
+    border-radius: 10px;
+    position: relative;
+}
+.slider .left-slide,.slider .right-slide {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #555;
+    font-size: 14px;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition:all .5s ease;
+}
+.slider .left-slide:hover,.slider .right-slide:hover {
+    background: rgb(255,154,0);
+    box-shadow: 0px 0px 10px #000;
+}
+.slider .left-slide {
+    left: 30px;
+}
+.slider .right-slide {
+    right: 30px;
+}
+.slider .slider-items .item iframe{
+    display: block;
+     width: 860px;
+    height: 515px;
+}
+.slider .slider-items .item {
+    display: none;
+}
+.slider .slider-items .item.active {
+    display: block;
+   
+}
+.video-menu {
+    vertical-align: top;
+    margin: 30px auto;
+}
+.video-menu h2 {
+    text-align: center;
+}
+.video-menu .more-videos {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 700px);
+    justify-content: center;
+}
+.more-videos div {
+        border-radius: 10px;
+        padding: 20px;
+        background: rgba(0,0,0,0.8);
+    border: 1px solid #555;
+}
+.more-videos div iframe {
+    width: 660px;
+    height: 315px;
+}
+@media (max-width: 992px) {
+
+    .slider .slider-items .item iframe{
+         width: 720px;
+        height: 380px;
+    }
+}
+@media (max-width: 768px) {
+
+    .video-menu .more-videos {
+        grid-template-columns: repeat(auto-fill, 480px);      
+    }
+    .slider .slider-items .item iframe{
+         width: 440px;
+        height: 350px;
+    }
+    .more-videos div iframe {
+        width: 440px;
+        height: 350px;
+    }
+}
+@media (max-width: 576px) {
+    .video-menu .more-videos {
+        grid-template-columns: repeat(auto-fill, 360px);      
+    }
+
+    .slider .slider-items .item iframe{
+         width: 320px;
+        height: 220px;
+    }
+    .more-videos div iframe {
+        width: 320px;
+        height: 220px;
+    }
+}
