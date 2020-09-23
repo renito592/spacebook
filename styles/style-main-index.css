@@ -48,8 +48,10 @@ area:hover {
     border-radius: 10px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.details-container .details-object-photo img{
+
+.details-container .details-object-photo iframe{
     height: 100%;
+    margin: auto;
 }
 .planet-name {
     color:  rgb(255,154,0);
